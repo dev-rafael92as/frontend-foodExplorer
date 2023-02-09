@@ -1,5 +1,5 @@
 export default {
-    COLORS: {
+    FONTS: {
         LIGHT_100: '#FFFFFF',
         LIGHT_200: '#FFFAF1',
         LIGHT_300: '#E1E1E6',
