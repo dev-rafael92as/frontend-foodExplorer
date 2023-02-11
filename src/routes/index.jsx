@@ -5,7 +5,7 @@ import { AuthRoutes } from './auth.routes'
 
 
 export const Routes = () => {
-    const auth = false
+    const auth = true
 
   return (
     <BrowserRouter>
