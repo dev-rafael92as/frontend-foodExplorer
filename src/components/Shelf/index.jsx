@@ -9,6 +9,9 @@ export const Shelf = ({title}) => {
 
         <div className='container-shelf'>
             <ProductSummary />
+            <ProductSummary />
+            <ProductSummary />
+            <ProductSummary />
         </div>
     </Container>
   )

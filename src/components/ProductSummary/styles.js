@@ -5,6 +5,7 @@ export const Container = styled.div`
     max-width: 304px;
     height: 462px;
     padding: 24px;
+    margin-right: 27px;
 
     border-radius: 8px;
     border: 1px solid ${({ theme }) => theme.FONTS.DARK_200};
