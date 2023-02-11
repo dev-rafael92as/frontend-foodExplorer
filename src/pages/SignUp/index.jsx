@@ -1,9 +1,11 @@
 import React from 'react'
+import Button from '../../components/Button'
+import ButtonText from '../../components/ButtonText'
 import Input from '../../components/Input'
 import LogoApp from '../../components/LogoApp'
 import { Container } from './styles'
 
-const SignIn = () => {
+const SignUp = () => {
   return (
     <Container>
         <LogoApp />
@@ -24,11 +26,15 @@ const SignIn = () => {
                 <label>Senha</label>
                 <Input placeholder="No mínimo 6 caracteres"></Input>
             </div>
+
+            <Button title="Criar conta" />
+
+            <div className='wrapper-button-to-singIn'>
+                <ButtonText title="Já tenho uma conta" />
+            </div>
         </div>
-
-
     </Container>
   )
 }
 
-export default SignIn
+export default SignUp
