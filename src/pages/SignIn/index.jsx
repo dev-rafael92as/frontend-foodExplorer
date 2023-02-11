@@ -25,7 +25,7 @@ const SignIn = () => {
 
             <Button title="Entrar" />
             <div className='wrapper-button-createAccount'>
-              <ButtonText title="Criar uma conta"/>
+              <ButtonText to="/register" title="Criar uma conta"/>
             </div>
         </div>
 

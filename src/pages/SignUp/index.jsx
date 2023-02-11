@@ -30,7 +30,7 @@ const SignUp = () => {
             <Button title="Criar conta" />
 
             <div className='wrapper-button-to-singIn'>
-                <ButtonText title="Já tenho uma conta" />
+                <ButtonText to="/" title="Já tenho uma conta" />
             </div>
         </div>
     </Container>
