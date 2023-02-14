@@ -1,15 +1,17 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import { AppRoutes } from './app.routes'
+import { AppRoutesAdmin } from './app.routesAdmin'
+import { AppRoutesUser } from './app.routesUser'
 import { AuthRoutes } from './auth.routes'
 
 
 export const Routes = () => {
-    const auth = true
+    const auth = false
+    const admin = true
 
   return (
     <BrowserRouter>
-        { auth ? <AppRoutes /> : <AuthRoutes/> }
+        { auth ? <AuthRoutes/> : admin ? <AppRoutesAdmin /> : <AppRoutesUser />}
     </BrowserRouter>
   )
 }

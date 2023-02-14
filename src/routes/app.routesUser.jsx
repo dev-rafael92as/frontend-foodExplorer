@@ -1,14 +1,14 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Details } from '../pages/DetailsUser'
+import { DetailsUser } from '../pages/DetailsUser'
 import { HomeUser } from '../pages/HomeUser'
 
 
-export function AppRoutes() {
+export function AppRoutesUser() {
   return (
     <Routes>
         <Route path="/" element={ <HomeUser/>} />
-        <Route path="/details" element={ <Details/>} />
+        <Route path="/details" element={ <DetailsUser/>} />
     </Routes>
   )
 }
