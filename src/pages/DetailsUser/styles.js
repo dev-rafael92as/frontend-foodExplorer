@@ -5,8 +5,8 @@ export const Container = styled.div`
     .container-details {
         width: 100%;
         max-width: 1122px;
-        margin: 0 auto;
-        height: calc(100vh - 205px);
+        margin: 0 auto 155px;
+        /* height: calc(100vh - 205px); */
 
         > a {
             margin-top: 24px;

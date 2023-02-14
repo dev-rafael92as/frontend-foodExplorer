@@ -30,6 +30,6 @@ export const Container = styled.div`
 
     .button-counter:disabled {
         border: none;
-        color: ${({ theme }) => theme.FONTS.LIGHT_500};;
+        color: ${({ theme }) => theme.FONTS.LIGHT_500};
     }
 `
