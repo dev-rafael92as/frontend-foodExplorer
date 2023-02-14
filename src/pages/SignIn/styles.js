@@ -42,6 +42,10 @@ export const Container = styled.div`
             }
         }
 
+        .wrapper-button-access {
+            height: 48px;
+        }
+
         .wrapper-button-createAccount {
             display: flex;
             justify-content: center;

@@ -23,7 +23,10 @@ const SignIn = () => {
                 <Input placeholder="No mínimo 6 caracteres"></Input>
             </div>
 
+            <div className='wrapper-button-access'>
             <Button title="Entrar" />
+            </div>
+
             <div className='wrapper-button-createAccount'>
               <ButtonText to="/register" title="Criar uma conta"/>
             </div>

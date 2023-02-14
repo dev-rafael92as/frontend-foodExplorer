@@ -9,7 +9,7 @@ import { TagIngredients } from '../../components/TagIngredients'
 import { Counter } from '../../components/Counter'
 import { AddToCart } from '../../components/AddToCart'
 
-export const Details = () => {
+export const DetailsUser = () => {
   return (
     <Container>
         <Header />
