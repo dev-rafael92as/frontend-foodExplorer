@@ -27,6 +27,22 @@ export const Container = styled.header`
         line-height: 1.75rem;
         font-family: 'Roboto', sans-serif;
         color: ${({ theme }) => theme.FONTS.LIGHT_100};
+
+        position: relative;
+    }
+
+    .logo-header.style-admin::after {
+        content: 'admin';
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 160%;
+        color: ${({ theme }) => theme.FONTS.CAKE_200};
+
+        position: absolute;
+        right: 14px;
+        bottom: -5px;
     }
 
     .search-input-header {
