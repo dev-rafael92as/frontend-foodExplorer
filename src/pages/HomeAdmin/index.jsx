@@ -14,9 +14,9 @@ export const HomeAdmin = () => {
         <MainBanner />
 
         <div className='container-shefs'>
-          <Shelf title="Refeições"></Shelf>
-          <Shelf title="Sobremesas"></Shelf>
-          <Shelf title="Bebidas"></Shelf>
+          <Shelf admin={true} title="Refeições"></Shelf>
+          <Shelf admin={true} title="Sobremesas"></Shelf>
+          <Shelf admin={true} title="Bebidas"></Shelf>
         </div>
       </main>
 
