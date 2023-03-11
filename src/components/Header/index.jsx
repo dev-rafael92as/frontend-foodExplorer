@@ -24,7 +24,7 @@ export const Header = ({admin}) => {
         </div>
 
         <div className='container-button'>
-            {admin ? <Button title="Novo Prato"/> : <Button icon={TbReceipt} title={`Pedidos (${0})`}/>}
+            {admin ? <Link to="/new-dishe"><Button title="Novo Prato"/></Link> : <Button icon={TbReceipt} title={`Pedidos (${0})`}/>}
         </div>
 
         <ButtonText to="/" icon={FaSignOutAlt} title=""/>
