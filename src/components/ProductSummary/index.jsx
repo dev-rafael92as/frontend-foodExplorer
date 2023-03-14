@@ -5,11 +5,22 @@ import { HiOutlineHeart, HiHeart } from 'react-icons/hi'
 import Button from '../Button'
 import { Counter } from '../Counter'
 import { Link } from 'react-router-dom'
+import { api } from '../../services/api'
 
-export const ProductSummary = ({...rest}) => {
+export const ProductSummary = ({ dishe, ...rest}) => {
     const [ wishProduct, setWishProduct ] = useState(false)
 
-  return (
+    const imageProduct = `${api.defaults.baseURL}/files/${dishe.image}` 
+    console.log("dishe", dishe)
+
+    // const currencyFormat = new Intl.NumberFormat('pt-BR', {
+    //     style: 'currency',
+    //     currency: 'BRL',
+    //     minimumFractionDigits: 2,
+    //     maximumFractionDigits: 2
+    // }).format(dishe.price)
+
+    return (
     <Container {...rest}>
         <Link to="/details">
             <img src={imageProduct} alt="" />
@@ -23,11 +34,11 @@ export const ProductSummary = ({...rest}) => {
 
         <div className='container-infoProduct'>
             <Link to="/details">
-                <h4>Spaguetti Gambe  &gt;</h4>
-                <p>Massa fresca com camarões e pesto.</p>
+                <h4>{dishe.title}  &gt;</h4>
+                <p>{dishe.description}</p>
 
                 <p className='sellingPrice'>
-                    R$ 79,97
+                    {dishe.price}
                 </p>
             </Link>
 

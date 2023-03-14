@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../../components/Button'
 import ButtonText from '../../components/ButtonText'
 import Input from '../../components/Input'
 import LogoApp from '../../components/LogoApp'
+import { useFoodExplorer } from '../../hooks/useFoodExplorerContext'
 import { Container } from './styles'
 
 const SignUp = () => {
+    const [ name, setName ] = useState()
+    const [ email, setEmail ] = useState()
+    const [ password, setPassword ] = useState()
+
+    const {  } = useFoodExplorer()
+
   return (
     <Container>
         <LogoApp />
@@ -14,17 +21,29 @@ const SignUp = () => {
             <h2>Crie sua conta</h2>
             <div className='container-input'>
                 <label>Seu Nome</label>
-                <Input placeholder="Exemplo: Maria da Silva"></Input>
+                <Input
+                    type='text'
+                    placeholder="Exemplo: Maria da Silva"
+                    onChange={e => setName(e.target.value)}    
+                ></Input>
             </div>
 
             <div className='container-input'>
                 <label>Email</label>
-                <Input placeholder="Exemplo: exemplo@exemplo.com.br"></Input>
+                <Input
+                    type="email" 
+                    placeholder="Exemplo: exemplo@exemplo.com.br"
+                    onChange={e => setEmail(e.target.value)}
+                ></Input>
             </div>
 
             <div className='container-input'>
                 <label>Senha</label>
-                <Input placeholder="No mínimo 6 caracteres"></Input>
+                <Input 
+                    type="password"
+                    placeholder="No mínimo 6 caracteres"
+                    onChange={e => setPassword(e.target.value)}
+                ></Input>
             </div>
 
             <div className='wrapper-button-create-account'> 
