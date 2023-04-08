@@ -7,6 +7,7 @@ function FoodExplorerProvider({ children }) {
     const [ data, setData ] = useState({});
     const [ dishes, setDishes ] = useState();
     const [ isLoading, setIsLoading ] = useState(false)
+    const [selectedCategory, setSelectedCategory] = useState("Refeições")
 
     async function signIn({ email, password }) {
         try {
@@ -82,6 +83,8 @@ function FoodExplorerProvider({ children }) {
                 user: data.user, 
                 updateProfile,
                 signOut,
+                selectedCategory, 
+                setSelectedCategory
             }}
         >
             {children}

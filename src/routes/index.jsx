@@ -8,10 +8,10 @@ import { AuthRoutes } from './auth.routes'
 
 export const Routes = () => {
   const { user } = useFoodExplorer()
-
+  // console.log("user", user?.isAdmin === 1, user)
   return (
     <BrowserRouter>
-        { !user ? <AuthRoutes/> : user && user.admin === 1 ? <AppRoutesAdmin /> : <AppRoutesUser />}
+        { !user ? <AuthRoutes/> : user?.isAdmin === 1 ? <AppRoutesAdmin /> : <AppRoutesUser />}
     </BrowserRouter>
   )
 }

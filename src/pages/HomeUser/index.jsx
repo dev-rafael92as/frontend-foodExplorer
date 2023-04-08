@@ -23,6 +23,7 @@ export const HomeUser = () => {
 
     showDishes()
   }, [])
+  console.log(dishes)
 
   return (
     <Container>

@@ -127,6 +127,7 @@ export const Container = styled.div`
                 font-size: 16px;
                 line-height: 100%;
                 color: ${({ theme }) => theme.FONTS.LIGHT_400};
+                cursor: pointer;
             }
 
             textarea {

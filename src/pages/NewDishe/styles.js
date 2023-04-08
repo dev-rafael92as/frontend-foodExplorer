@@ -45,6 +45,7 @@ export const Container = styled.div`
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
+                    cursor: pointer;
 
                     span {
                         color: ${({ theme }) => theme.FONTS.LIGHT_100};
@@ -92,6 +93,7 @@ export const Container = styled.div`
                     font-size: 16px;
                     line-height: 100%;
                     color: ${({ theme }) => theme.FONTS.LIGHT_400};
+                    cursor: pointer;
                 }
 
                 .container-ingredients-tag {
@@ -127,6 +129,7 @@ export const Container = styled.div`
                 font-size: 16px;
                 line-height: 100%;
                 color: ${({ theme }) => theme.FONTS.LIGHT_400};
+                cursor: pointer;
             }
 
             textarea {

@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container } from './styles'
 import { SlPencil } from 'react-icons/sl'
-import Button from '../Button'
-import { Counter } from '../Counter'
-import imageProduct from '../../assets/mask-group-3.png'
+import { api } from '../../services/api'
 
 
-export const ProductSummaryAdmin = ({...rest}) => {
-  return (
+export const ProductSummaryAdmin = ({ dishe, ...rest}) => {
+    const imageProduct = `${api.defaults.baseURL}/files/${dishe.image}` 
+
+    console.log(dishe)
+    return (
     <Container>
             <img src={imageProduct} alt="" />
         <Link to="/edit">
@@ -17,22 +18,15 @@ export const ProductSummaryAdmin = ({...rest}) => {
 
         <div className='container-infoProduct'>
             <Link to="/details-admin">
-                <h4>Spaguetti Gambe  &gt;</h4>
-                <p>Massa fresca com camarões e pesto.</p>
+                <h4>{dishe?.title}  &gt;</h4>
+                <p>{dishe?.description}</p>
 
                 <p className='sellingPrice'>
-                    R$ 79,97
+                    {dishe?.price}
                 </p>
             </Link>
 
-            {/* <div className='container-counter'>
-                <Counter />
-                
-                <div className='wrapper-buy-button'>
-                    <Button title="incluir"/>
-                </div>
-            </div> */}
         </div>
     </Container>
-  )
+    )
 }

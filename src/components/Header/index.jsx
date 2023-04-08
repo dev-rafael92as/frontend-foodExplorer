@@ -9,11 +9,11 @@ import { Link } from 'react-router-dom'
 import { useFoodExplorer } from '../../hooks/useFoodExplorerContext'
 
 export const Header = () => {
-    const { user } = useFoodExplorer()
+    const { user, signOut } = useFoodExplorer()
   return (
     <Container>
         <div className='wrapper-content-header'>
-        <Link to="/" className={user.admin === 1 ? `logo-header style-admin` : "logo-header"}>
+        <Link to="/" className={user?.isAdmin === 1 ? `logo-header style-admin` : "logo-header"}>
             <svg width="27" height="30" viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.5391 0L26.5294 7.5V22.5L13.5391 30L0.548681 22.5V7.5L13.5391 0Z" fill="#065E7C"/>
             </svg>
@@ -26,10 +26,10 @@ export const Header = () => {
         </div>
 
         <div className='container-button'>
-            {user.admin === 1 ? <Link to="/new-dishe"><Button title="Novo Prato"/></Link> : <Button icon={TbReceipt} title={`Pedidos (${0})`}/>}
+            {user?.isAdmin === 1 ? <Link to="/new-dishe"><Button title="Novo Prato"/></Link> : <Button icon={TbReceipt} title={`Pedidos (${0})`}/>}
         </div>
 
-        <ButtonText to="/" icon={FaSignOutAlt} title=""/>
+        <ButtonText onClick={signOut} to="/" icon={FaSignOutAlt} title=""/>
         </div>
     </Container>
   )
