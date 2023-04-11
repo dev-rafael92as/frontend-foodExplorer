@@ -87,8 +87,6 @@ export const NewDishe = () => {
       setLoading(false);
     }
 
-    console.log("ingredientTags", ingredientTags, "imageFile", imageFile, "title", title, "description", description, "category", selectedCategory, "price", price)
-
     return (
     <Container>
         <Header admin={true} />
@@ -101,7 +99,7 @@ export const NewDishe = () => {
           <div>
             <div className='edit-dishe-firstRow'>
               <div className='edit-dishe-firstRow-imgFile'>
-                <label htmlFor="img-dishe">Imagem do prato <span><FiUpload /> Selecione a imagem</span></label>
+                {imageFile ? <label htmlFor="img-dishe">Imagem do prato <span><FiUpload /> {imageFile.name}</span></label> : <label htmlFor="img-dishe">Imagem do prato <span><FiUpload /> Selecione a imagem</span></label> }
                 
                 <input 
                   type="file" 

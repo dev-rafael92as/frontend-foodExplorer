@@ -9,7 +9,6 @@ export const Shelf = ({title}) => {
   const admin = user?.isAdmin === 1 ? true : false
 
   const dishesCategory = dishes?.filter((dish) => dish.category.replace(' ', '') === title);
-  console.log("dishesCategory", dishesCategory)
   return (
     <Container>
         <h2>{title}</h2>
