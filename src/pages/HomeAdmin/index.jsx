@@ -23,7 +23,6 @@ export const HomeAdmin = () => {
 
     showDishes()
   }, [])
-  console.log("dishes", dishes)
 
   const admin = user?.isAdmin === 1 ? true : false
 

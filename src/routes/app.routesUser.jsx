@@ -8,7 +8,7 @@ export function AppRoutesUser() {
   return (
     <Routes>
         <Route path="/" element={ <HomeUser/>} />
-        <Route path="/details" element={ <DetailsUser/>} />
+        <Route path="/details/:id" element={ <DetailsUser/>} />
     </Routes>
   )
 }

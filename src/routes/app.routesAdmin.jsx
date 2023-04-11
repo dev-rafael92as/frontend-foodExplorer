@@ -10,9 +10,9 @@ export function AppRoutesAdmin() {
   return (
     <Routes>
         <Route path="/" element={ <HomeAdmin/>} />
-        <Route path="/details-admin" element={ <DetailsAdmin/>} />
+        <Route path="/details-admin/:id" element={ <DetailsAdmin/>} />
         <Route path="/new-dishe" element={ <NewDishe /> } />
-        <Route path="/edit" element={ <EditDishe /> } />
+        <Route path="/edit/:id" element={ <EditDishe /> } />
     </Routes>
   )
 }

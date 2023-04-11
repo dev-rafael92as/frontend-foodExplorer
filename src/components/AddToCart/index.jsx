@@ -5,7 +5,7 @@ export const AddToCart = ({price, ...rest}) => {
   return (
     <Container>
         <button {...rest}>
-            {`incluir ∙ R$${price}`}
+            {`incluir ∙ ${price}`}
         </button>
     </Container>
   )
