@@ -11,7 +11,6 @@ export const ProductSummary = ({ dishe, ...rest}) => {
     const [ wishProduct, setWishProduct ] = useState(false)
 
     const imageProduct = `${api.defaults.baseURL}/files/${dishe.image}` 
-    console.log("dishe", dishe)
 
     // const currencyFormat = new Intl.NumberFormat('pt-BR', {
     //     style: 'currency',
@@ -22,7 +21,7 @@ export const ProductSummary = ({ dishe, ...rest}) => {
 
     return (
     <Container {...rest}>
-        <Link to="/details">
+        <Link to={`/details/${dishe.id}`}>
             <img src={imageProduct} alt="" />
         </Link>
         <button 

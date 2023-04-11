@@ -18,6 +18,7 @@ export const Container = styled.div`
     align-items: center;
 
     .whishlist-button {
+        border: none;
         position: absolute;
         right: 20px;
         top: 20px;
