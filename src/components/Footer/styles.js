@@ -18,6 +18,15 @@ export const Container = styled.footer`
         justify-content: space-between;
         color: ${({ theme }) => theme.FONTS.LIGHT_200};
 
+        @media (max-width:40rem) {
+            margin: 0 24px;
+
+            p {
+                font-size: 12px;
+                line-height: 16px;        
+            }
+        }
+
         .logo-footer {
             display: flex;
             align-items: center;
@@ -29,6 +38,17 @@ export const Container = styled.footer`
             font-size: 24px;
             line-height: 28px;
             color: ${({ theme }) => theme.FONTS.LIGHT_700};
+
+            @media (max-width:40rem) {
+                font-size: 15.2616px;
+                line-height: 18px;
+                gap: 6px;
+
+                > svg {
+                    width: 22px;
+                    height: 18px;
+                }
+            }
         }
     }
 `

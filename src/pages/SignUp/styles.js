@@ -9,6 +9,10 @@ export const Container = styled.div`
     width: 100%;
     max-width: 1106px;
 
+    @media (max-width: 40rem) {
+        flex-direction: column;
+    }
+
     .container-content {
         padding: 64px;
         border-radius: 16px;
@@ -20,12 +24,23 @@ export const Container = styled.div`
         height: 621px;
         justify-content: space-between;
 
+        @media (max-width: 40rem) {
+            background-color: ${({ theme }) => theme.FONTS.DARK_400};
+            padding: 0 47px 0 64px;
+            margin: 67px 0;
+            max-height: 416px;
+        }
+
         h2 {
             font-weight: 500;
             font-size: 32px;
             color: ${({ theme }) => theme.FONTS.LIGTH_100};
             text-align: center;
             margin-bottom: 32px;
+
+            @media (max-width: 40rem) {
+                display: none;
+            }
         }
 
         .container-input {

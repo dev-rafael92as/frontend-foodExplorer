@@ -14,5 +14,10 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 48px;
+
+        @media (max-width: 40rem) {
+            margin-top: 62px;
+            height: auto;
+        }
     }
 `

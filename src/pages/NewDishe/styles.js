@@ -6,12 +6,22 @@ export const Container = styled.div`
         max-width: 1120px;
         margin: 40px auto 0;
 
+        @media (max-width:40rem) {
+            padding: 10px 32px;
+            margin: 0;
+        }
+
         > a {
             font-weight: 700;
             font-size: 24px;
             line-height: 140%;
             color: ${({ theme }) => theme.FONTS.LIGHT_300};
             margin-bottom: 24px;
+
+            @media (max-width:40rem) {
+                font-size: 16.5459px;
+                line-height: 140%;
+            }
 
             svg {
                 width: 20px;
@@ -25,6 +35,11 @@ export const Container = styled.div`
             line-height: 140%;
             color: ${({ theme }) => theme.FONTS.LIGHT_300};
             margin-bottom: 32px;
+
+            @media (max-width:40rem) {
+                font-size: 32px;
+                line-height: 140%;
+            }
         }
 
         .edit-dishe-firstRow {
@@ -32,9 +47,18 @@ export const Container = styled.div`
             align-items: center;
             justify-content: space-between;
 
+            @media (max-width:40rem) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+            }
+
             .edit-dishe-firstRow-imgFile {
                 max-width: 229px;
                 width: 100%;
+                @media (max-width: 40rem) {
+                    max-width: 100%;
+                }
 
                 label {
                     font-weight: 400;
@@ -57,6 +81,11 @@ export const Container = styled.div`
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+
+                        @media (max-width:40rem) {
+                            justify-content: flex-start;
+                            gap: 8px;
+                        }
                     }
                 }
 
@@ -81,6 +110,12 @@ export const Container = styled.div`
             align-items: center;
             justify-content: space-between;
             margin-top: 32px;
+
+            @media (max-width:40rem) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+            }
 
             .edit-dishe-secondRow-ingredients {
                 display: flex;
@@ -107,12 +142,21 @@ export const Container = styled.div`
                     display: flex;
                     gap: 16px;
                     align-items: center;
+
+                    @media (max-width: 40rem) {
+                        flex-wrap: wrap;
+                        height: auto;
+                    }
                 }
 
             }
             .edit-dishe-secondRow-price {
                 max-width: 251px;
                 width: 100%;
+
+                @media (max-width:40rem) {
+                    max-width: 100%;
+                }
             }
         }
 

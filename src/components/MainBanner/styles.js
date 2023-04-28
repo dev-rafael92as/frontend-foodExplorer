@@ -13,16 +13,36 @@ export const Container = styled.div`
     padding-right: 100px;
     align-items: center;
 
+    @media (max-width: 40rem) {
+        max-width: 376px;
+        height: 120px;
+        margin-left: 36px;
+        margin-top: 44px;
+        padding-right: 0;
+
+    }
+
     img {
         position: absolute;
         bottom: -13px;
         left: -70px;
         opacity: 0.8;
+
+        @media (max-width: 40rem) {
+            max-width: 200px;
+            height: 161px;
+            bottom: -5px;
+            left: -37px;
+        }
     }
 
     div {
         max-width: 422px;
         color: ${({ theme }) => theme.FONTS.LIGHT_300};
+
+        @media (max-width: 40rem) {
+            max-width: 202px;
+        }
         
         h2 {
             font-style: normal;
@@ -30,6 +50,11 @@ export const Container = styled.div`
             font-size: 40px;
             line-height: 140%;
             margin-bottom: 8px;
+
+            @media (max-width: 40rem) {
+                font-size: 18px;
+                line-height: 140%;
+            }
         }
 
         p {
@@ -38,6 +63,11 @@ export const Container = styled.div`
             font-weight: 400;
             font-size: 16px;
             line-height: 100%;
+
+            @media (max-width: 40rem) {
+                font-size: 12px;
+                line-height: 140%;
+            }
         }
     }
 `

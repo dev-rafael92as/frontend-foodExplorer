@@ -17,6 +17,13 @@ export const Container = styled.div`
     position: relative;
     align-items: center;
 
+    @media (max-width: 40rem) {
+        width: 210px;
+        height: 292px;
+        margin-right: 0;
+        
+    }
+
     > a {
         position: absolute;
         right: 20px;
@@ -33,6 +40,10 @@ export const Container = styled.div`
     img {
         width: 100%;
         max-width: 176px;
+
+        @media (max-width:40rem) {
+            max-width: 88px;
+        }
     }
 
     .container-infoProduct {
@@ -49,6 +60,11 @@ export const Container = styled.div`
             font-size: 24px;
             line-height: 140%;
             color: ${({ theme }) => theme.FONTS.LIGHT_300};
+
+            @media (max-width: 40rem) {
+                font-size: 14px;
+                line-height: 24px;
+            }
         }
 
         p {
@@ -58,6 +74,12 @@ export const Container = styled.div`
             font-size: 14px;
             line-height: 160%;
             color: ${({ theme }) => theme.FONTS.LIGHT_400};
+        }
+
+        .dishe-description {
+            @media (max-width: 40rem) {
+                display: none;
+            }
         }
 
         .sellingPrice {

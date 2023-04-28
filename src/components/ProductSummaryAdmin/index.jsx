@@ -18,7 +18,7 @@ export const ProductSummaryAdmin = ({ dishe, ...rest}) => {
         <div className='container-infoProduct'>
             <Link to={`/details-admin/${dishe.id}`}>
                 <h4>{dishe?.title}  &gt;</h4>
-                <p>{dishe?.description}</p>
+                <p className='dishe-description'>{dishe?.description}</p>
 
                 <p className='sellingPrice'>
                     {dishe?.price}

@@ -10,4 +10,16 @@ export const Container = styled.div`
 
     font-family: 'Roboto', sans-serif;
     color: ${({ theme }) => theme.FONTS.LIGHT_100};
+
+    @media (max-width: 40rem) {
+        font-weight: 700;
+        font-size: 2.375rem;
+        line-height: 2.75rem;
+        max-width: 292px;
+
+        svg {
+            width: 43px !important;
+            height: 43px !important;
+        }
+    }
 `
