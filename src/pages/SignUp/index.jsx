@@ -5,13 +5,48 @@ import Input from '../../components/Input'
 import LogoApp from '../../components/LogoApp'
 import { useFoodExplorer } from '../../hooks/useFoodExplorerContext'
 import { Container } from './styles'
+import { api } from '../../services/api'
+import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
     const [ name, setName ] = useState()
     const [ email, setEmail ] = useState()
     const [ password, setPassword ] = useState()
+    const [ isLoading, setIsLoading ] = useState(false)
+
+    const navigate = useNavigate()
 
     const {  } = useFoodExplorer()
+
+    const handleSingUp = () => {
+        if (!name || !email || !password) {
+            return alert('Preencha todos os campos')
+        } 
+
+        if (password.length < 6) {
+            return alert('A senha deve conter no mínimo 6 caracteres')
+        }
+
+        setIsLoading(true)
+
+        api.post('/users', {name, email, password}).then(() => {
+            alert('Usuário cadastrado com sucesso')
+            navigate('/')
+
+            setIsLoading(false)
+        })
+
+        .catch(error => {
+           if (error.response) {
+                alert(error.response.data.message)
+            } else {
+                alert('Não foi possível cadastrar')
+            }
+
+        setIsLoading(false)
+        })
+    }
+
 
   return (
     <Container>
@@ -47,7 +82,11 @@ const SignUp = () => {
             </div>
 
             <div className='wrapper-button-create-account'> 
-                <Button title="Criar conta" />
+                <Button 
+                    onClick={handleSingUp} 
+                    title="Criar conta" 
+                    disabled={isLoading}
+                />
             </div>
 
             <div className='wrapper-button-to-singIn'>
